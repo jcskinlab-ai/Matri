@@ -1,0 +1,150 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "feed/**",
+              "landing-tweaks.jsx",
+              "resize-tool.js",
+              "tweaks-panel.jsx"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Cormorant Garamond|Jost))/i]",
+        "message": "Font not provided by the design system. Available: Cormorant Garamond, Jost."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--jc-accent",
+      "--jc-accent-bright",
+      "--jc-accent-deep",
+      "--jc-accent-soft",
+      "--jc-bg-dark",
+      "--jc-bg-ink",
+      "--jc-bg-light",
+      "--jc-fg-on-dark",
+      "--jc-fg-on-light",
+      "--jc-grey-100",
+      "--jc-grey-200",
+      "--jc-grey-300",
+      "--jc-grey-400",
+      "--jc-grey-50",
+      "--jc-grey-500",
+      "--jc-grey-600",
+      "--jc-grey-700",
+      "--jc-grey-800",
+      "--jc-grey-900",
+      "--jc-hairline",
+      "--jc-hairline-d",
+      "--jc-ink",
+      "--jc-ink-2",
+      "--jc-platinum",
+      "--jc-r-md",
+      "--jc-r-pill",
+      "--jc-r-sm",
+      "--jc-s1",
+      "--jc-s2",
+      "--jc-s3",
+      "--jc-s4",
+      "--jc-s5",
+      "--jc-s6",
+      "--jc-s7",
+      "--jc-sans",
+      "--jc-serif",
+      "--jc-shadow-card",
+      "--jc-shadow-soft",
+      "--jc-track-mid",
+      "--jc-track-tight",
+      "--jc-track-wide",
+      "--jc-white"
+    ],
+    "tokenKinds": {
+      "--jc-white": "color",
+      "--jc-grey-50": "color",
+      "--jc-grey-100": "color",
+      "--jc-grey-200": "color",
+      "--jc-grey-300": "color",
+      "--jc-grey-400": "color",
+      "--jc-grey-500": "color",
+      "--jc-grey-600": "color",
+      "--jc-grey-700": "color",
+      "--jc-grey-800": "color",
+      "--jc-grey-900": "color",
+      "--jc-ink": "color",
+      "--jc-ink-2": "color",
+      "--jc-accent": "color",
+      "--jc-accent-soft": "color",
+      "--jc-accent-bright": "color",
+      "--jc-accent-deep": "color",
+      "--jc-platinum": "color",
+      "--jc-bg-light": "color",
+      "--jc-bg-dark": "color",
+      "--jc-bg-ink": "color",
+      "--jc-fg-on-light": "color",
+      "--jc-fg-on-dark": "color",
+      "--jc-hairline": "color",
+      "--jc-hairline-d": "color",
+      "--jc-serif": "font",
+      "--jc-sans": "font",
+      "--jc-track-wide": "spacing",
+      "--jc-track-mid": "spacing",
+      "--jc-track-tight": "spacing",
+      "--jc-r-pill": "spacing",
+      "--jc-r-sm": "spacing",
+      "--jc-r-md": "spacing",
+      "--jc-s1": "spacing",
+      "--jc-s2": "spacing",
+      "--jc-s3": "spacing",
+      "--jc-s4": "spacing",
+      "--jc-s5": "spacing",
+      "--jc-s6": "spacing",
+      "--jc-s7": "spacing",
+      "--jc-shadow-card": "shadow",
+      "--jc-shadow-soft": "shadow"
+    },
+    "fontFamilies": [
+      "Cormorant Garamond",
+      "Jost"
+    ]
+  }
+}

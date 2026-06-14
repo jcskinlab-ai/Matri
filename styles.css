@@ -1,0 +1,4 @@
+/* JC Medical — hoja raíz del design system.
+   Consumidores enlazan solo este archivo; el resto se importa aquí. */
+@import url("./colors_and_type.css");
+@import url("./feed/posts.css");
