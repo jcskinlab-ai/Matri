@@ -1,0 +1,105 @@
+/* ============================================================
+   JC MEDICAL.CL — SISTEMA DE COLOR Y TIPOGRAFÍA
+   Feed premium · gris frío clínico + carbón + acento acero
+   ============================================================ */
+/* Paleta clínica fría — acento ACERO (restaurada) */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ---- NEUTROS FRÍOS (escala de gris) ---- */
+  --jc-white:    #F5F6F7;  /* casi-blanco frío para tipografía sobre oscuro */
+  --jc-grey-50:  #ECEEF0;
+  --jc-grey-100: #DFE2E5;
+  --jc-grey-200: #CDD1D5;  /* ★ BASE DEL FEED — gris claro frío (reemplaza blanco crudo) */
+  --jc-grey-300: #B2B7BD;
+  --jc-grey-400: #8B9197;  /* texto secundario sobre claro */
+  --jc-grey-500: #646A72;
+  --jc-grey-600: #474D56;
+  --jc-grey-700: #31363E;
+  --jc-grey-800: #20242B;  /* carbón */
+  --jc-grey-900: #14171C;  /* carbón profundo / casi negro */
+
+  /* ---- TINTA / NAVY (del monograma y uniforme) ---- */
+  --jc-ink:     #121A26;   /* navy tinta — bandas de pie, fondos serios */
+  --jc-ink-2:   #1C2838;   /* navy un paso más claro para degradados */
+
+  /* ---- ACENTO (acero clínico, frío) ---- */
+  --jc-accent:        #6E8CA6;  /* acero — líneas, detalles, hover */
+  --jc-accent-soft:   #A4B6C6;  /* acero claro — eyebrows sobre oscuro */
+  --jc-accent-bright: #8AA4BC;  /* acero luminoso — CTA 'Agenda tu evaluación' */
+  --jc-accent-deep:   #5A748C;  /* acero profundo — base de degradados de botón */
+
+  /* ---- PLATA (filetes premium sobre oscuro) ---- */
+  --jc-platinum: #C8CDD2;
+
+  /* ---- SEMÁNTICOS DE SUPERFICIE ---- */
+  --jc-bg-light:    var(--jc-grey-200);  /* fondo claro dominante */
+  --jc-bg-dark:     var(--jc-grey-900);  /* fondo carbón */
+  --jc-bg-ink:      var(--jc-ink);       /* fondo navy */
+  --jc-fg-on-light: var(--jc-grey-900);
+  --jc-fg-on-dark:  var(--jc-white);
+  --jc-hairline:    rgba(20,23,28,0.22); /* filete sobre claro */
+  --jc-hairline-d:  rgba(245,246,247,0.22); /* filete sobre oscuro */
+
+  /* ---- TIPOGRAFÍA ---- */
+  --jc-serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif; /* @kind font */
+  --jc-sans:  'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif; /* @kind font */
+
+  /* tracking de mayúsculas (eyebrows / labels) */
+  --jc-track-wide:  0.34em;
+  --jc-track-mid:   0.18em;
+  --jc-track-tight: 0.08em;
+
+  /* ---- RADIOS ---- */
+  --jc-r-pill: 999px;
+  --jc-r-sm: 4px;
+  --jc-r-md: 8px;
+
+  /* ---- ESPACIO (escala base 8) ---- */
+  --jc-s1: 8px;  --jc-s2: 16px; --jc-s3: 24px; --jc-s4: 32px;
+  --jc-s5: 48px; --jc-s6: 64px; --jc-s7: 96px;
+
+  /* ---- SOMBRAS (suaves, frías) ---- */
+  --jc-shadow-card: 0 24px 60px -28px rgba(18,26,38,0.45);
+  --jc-shadow-soft: 0 8px 28px -16px rgba(18,26,38,0.35);
+}
+
+/* ============================================================
+   ESTILOS SEMÁNTICOS DE TEXTO (referencia)
+   ============================================================ */
+.jc-eyebrow {
+  font-family: var(--jc-sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--jc-track-wide);
+}
+.jc-display {              /* nombres de tratamiento, hero */
+  font-family: var(--jc-serif);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+}
+.jc-display-it {
+  font-family: var(--jc-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+.jc-headline {            /* titulares sans (autoridad, mayúsculas) */
+  font-family: var(--jc-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.02;
+}
+.jc-body {
+  font-family: var(--jc-sans);
+  font-weight: 300;
+  line-height: 1.55;
+}
+.jc-label {               /* ANTES / DESPUÉS, etiquetas */
+  font-family: var(--jc-sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--jc-track-mid);
+}
